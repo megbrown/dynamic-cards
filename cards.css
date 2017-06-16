@@ -1,0 +1,15 @@
+#createBtn {
+	display: block;
+	font-size: 1.5em;
+}
+.card {
+	width: 200px;
+	height: 250px;
+	text-align: center;
+	border: 2px solid #000;
+	margin: 1em;
+	display: inline-block;
+}
+h1 {
+	margin-top: 100px;
+}
