@@ -1,6 +1,5 @@
 // Requirements
 
-
 // When the user enters in text into the text area and then clicks the create button,
 // create a new card element in the DOM that includes it's own delete button. You decide
 // the height/width of the card.
@@ -13,18 +12,25 @@ var createBtn = document.getElementById("createBtn");
 var cardsArea = document.getElementById("cardsArea");
 var deleteBtn = document.getElementById("deleteBtn");
 var newCard = document.getElementsByClassName("card");
+let cardArr = [];
 
-createBtn.addEventListener("click", function() {
-	cardsArea.innerHTML +=
-	`<div class="card">
-	 <h1>${textInput.value}</h1>
-	 <button id="deleteBtn">Delete</button>
-	 </div>`
-});
+// createBtn.addEventListener("click", function() {
+// 	cardsArea.innerHTML +=
+// 	`<div class="card">
+// 	 <h1>${textInput.value}</h1>
+// 	 <button id="deleteBtn">Delete</button>
+// 	 </div>`
+// 	 cardArr += newCard
+// });
 
-cardsArea.addEventListener("click", function() {
-	cardsArea.remove(cardsArea.newCard);
-})
+function makeCard() {
+	let card = document.createElement("div");
+
+
+}
+
+
+
 
 
 
