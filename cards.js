@@ -10,24 +10,30 @@
 var textInput = document.getElementById("input-area");
 var createBtn = document.getElementById("createBtn");
 var cardsArea = document.getElementById("cardsArea");
-var deleteBtn = document.getElementById("deleteBtn");
 var newCard = document.getElementsByClassName("card");
-let cardArr = [];
+let card = document.createElement("div");
 
-// createBtn.addEventListener("click", function() {
-// 	cardsArea.innerHTML +=
-// 	`<div class="card">
-// 	 <h1>${textInput.value}</h1>
-// 	 <button id="deleteBtn">Delete</button>
-// 	 </div>`
-// 	 cardArr += newCard
-// });
 
 function makeCard() {
 	let card = document.createElement("div");
-
-
+	card.setAttribute("class", "card");
+	card.innerHTML = `<h1>${textInput.value}</h1>`
+	cardsArea.appendChild(card);
+	deleteBtns(card);
 }
+
+function deleteBtns(card) {
+	let deleteBtn = document.createElement("button");
+	deleteBtn.setAttribute("class", "delete");
+	console.log("hey");
+  deleteBtn.innerHTML = "Delete";
+	card.appendChild(deleteBtn);
+}
+
+createBtn.addEventListener("click", function() {
+	makeCard();
+});
+
 
 
 
