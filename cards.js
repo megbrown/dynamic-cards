@@ -35,14 +35,3 @@ function deleteBtns(card) {
 createBtn.addEventListener("click", function() {
 	makeCard();
 });
-
-
-
-
-
-
-
-
-
-
-
