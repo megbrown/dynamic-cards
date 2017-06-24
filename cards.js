@@ -7,12 +7,11 @@
 // should then be removed from the DOM. Not just made invisible, actually
 // removed from the DOM.
 
-var textInput = document.getElementById("input-area");
-var createBtn = document.getElementById("createBtn");
-var cardsArea = document.getElementById("cardsArea");
-var newCard = document.getElementsByClassName("card");
+let textInput = document.getElementById("input-area");
+let createBtn = document.getElementById("createBtn");
+let cardsArea = document.getElementById("cardsArea");
 let card = document.createElement("div");
-
+let deleteBtn = document.getElementsByClassName("delete");
 
 function makeCard() {
 	let card = document.createElement("div");
@@ -23,16 +22,23 @@ function makeCard() {
 }
 
 function deleteBtns(card) {
+	console.log("hey");
 	let deleteBtn = document.createElement("button");
 	deleteBtn.setAttribute("class", "delete");
-	console.log("hey");
   deleteBtn.innerHTML = "Delete";
 	card.appendChild(deleteBtn);
+	deleteBtn.addEventListener("click", function(){
+		cardsArea.removeChild(card);
+	})
 }
 
 createBtn.addEventListener("click", function() {
 	makeCard();
 });
+
+
+
+
 
 
 
